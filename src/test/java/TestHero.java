@@ -111,5 +111,18 @@ class TestHero
 		assertEquals(robotAatk, dwarfA.attack(val));
 		assertEquals(robotMatk, dwarfM.attack(val));
 	}
+	
+	@Test
+	void testInvalidHeroRaceJob()
+	{
+		HeroInterface invalidHeroA = HeroFactory.createHero("HUMAN", "WARRIOR");
+		HeroInterface invalidHeroB = HeroFactory.createHero("ELF", "CLERK");
+		HeroInterface invalidHeroC = HeroFactory.createHero("HUMAN", "CLERK");
+
+		assertEquals(null, invalidHeroA);
+		assertEquals(null, invalidHeroB);
+		assertEquals(null, invalidHeroC);
+
+	}
 
 }
