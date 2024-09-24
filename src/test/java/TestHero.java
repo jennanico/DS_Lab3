@@ -18,17 +18,17 @@ class TestHero
 	@BeforeEach
 	void setUp() throws Exception
 	{
-		HeroInterface elfW = HeroFactory.createHero("ELF", "WARRIOR");
-		HeroInterface elfA = HeroFactory.createHero("ELF", "ARCHER");
-		HeroInterface elfM = HeroFactory.createHero("ELF", "MAGE");
+		elfW = HeroFactory.createHero("ELF", "WARRIOR");
+		elfA = HeroFactory.createHero("ELF", "ARCHER");
+		elfM = HeroFactory.createHero("ELF", "MAGE");
 	
-		HeroInterface dwarfW = HeroFactory.createHero("DWARF", "WARRIOR");
-		HeroInterface dwarfA = HeroFactory.createHero("DWARF", "ARCHER");
-		HeroInterface dwarfM = HeroFactory.createHero("DWARF", "MAGE");
+		dwarfW = HeroFactory.createHero("DWARF", "WARRIOR");
+		dwarfA = HeroFactory.createHero("DWARF", "ARCHER");
+		dwarfM = HeroFactory.createHero("DWARF", "MAGE");
 		
-		HeroInterface robotW = HeroFactory.createHero("ROBOT", "WARRIOR");
-		HeroInterface robotA = HeroFactory.createHero("ROBOT", "ARCHER");
-		HeroInterface robotM = HeroFactory.createHero("ROBOT", "MAGE");
+		robotW = HeroFactory.createHero("ROBOT", "WARRIOR");
+		robotA = HeroFactory.createHero("ROBOT", "ARCHER");
+		robotM = HeroFactory.createHero("ROBOT", "MAGE");
 	
 	}
 
@@ -107,9 +107,9 @@ class TestHero
 		assertEquals(dwarfAatk, dwarfA.attack(val));
 		assertEquals(dwarfMatk, dwarfM.attack(val));
 
-		assertEquals(robotWatk, dwarfW.attack(val));
-		assertEquals(robotAatk, dwarfA.attack(val));
-		assertEquals(robotMatk, dwarfM.attack(val));
+		assertEquals(robotWatk, robotW.attack(val));
+		assertEquals(robotAatk, robotA.attack(val));
+		assertEquals(robotMatk, robotM.attack(val));
 	}
 	
 	@Test
