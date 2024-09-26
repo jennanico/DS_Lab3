@@ -13,7 +13,7 @@ public class Hero implements HeroInterface
 	@Override
 	public int attack(int val)
 	{
-		return heroJob.attack(val);
+		return heroJob.attack(val, this);
 	}
 
 	@Override
